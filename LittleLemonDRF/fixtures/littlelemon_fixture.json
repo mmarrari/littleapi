@@ -1,0 +1,192 @@
+[
+    {
+      "model": "auth.group",
+      "pk": 1,
+      "fields": {
+        "name": "Manager"
+      }
+    },
+    {
+      "model": "auth.group",
+      "pk": 2,
+      "fields": {
+        "name": "Delivery Crew"
+      }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "admin",
+            "password": "adminpassword",
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "username": "manager1",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": [1]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 3,
+      "fields": {
+        "username": "manager2",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": [1]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 4,
+      "fields": {
+        "username": "delivery1",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": [2]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 5,
+      "fields": {
+        "username": "delivery2",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": [2]
+      }
+    },    
+    {
+      "model": "auth.user",
+      "pk": 6,
+      "fields": {
+        "username": "newmanager",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 7,
+      "fields": {
+        "username": "newdeliverycrew",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 8,
+      "fields": {
+        "username": "customer1",
+        "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+        "groups": []
+      }
+    },
+    {
+      "model": "LittleLemonDRF.category",
+      "pk": 1,
+      "fields": {
+          "slug": "category1",
+          "title": "Category 1"
+      }
+    },
+    {
+      "model": "LittleLemonDRF.category",
+      "pk": 100,
+      "fields": {
+          "slug": "category100",
+          "title": "Category 100"
+      }
+    },
+    {
+      "model": "LittleLemonDRF.menuitem",
+      "pk": 1,
+      "fields": {
+        "title": "Pizza Margherita",
+        "price": 10.00,
+        "featured": true,
+        "category": 1
+      }
+    },
+    {
+      "model": "LittleLemonDRF.menuitem",
+      "pk": 2,
+      "fields": {
+        "title": "Cheeseburger",
+        "price": 8.50,
+        "featured": false,
+        "category": 1
+      }
+    },
+    {
+      "model": "LittleLemonDRF.cart",
+      "pk": 1,
+      "fields": {
+        "user": 8,
+        "menuitem": 1,
+        "quantity": 2,
+        "unit_price": 10.00,
+        "price": 20.00
+      }
+    },
+    {
+      "model": "LittleLemonDRF.cart",
+      "pk": 2,
+      "fields": {
+        "user": 8,
+        "menuitem": 2,
+        "quantity": 1,
+        "unit_price": 8.50,
+        "price": 8.50
+      }
+    },
+    {
+      "model": "LittleLemonDRF.order",
+      "pk": 1,
+      "fields": {
+        "user": 8,
+        "delivery_crew": 4,
+        "status": true,
+        "total": 20.00,
+        "date": "2023-10-02"
+      }
+    },
+    {
+      "model": "LittleLemonDRF.orderitem",
+      "pk": 1,
+      "fields": {
+        "order": 1,
+        "menuitem": 1,
+        "quantity": 2,
+        "unit_price": 10.00,
+        "price": 20.00
+      }
+    },
+    {
+      "model": "LittleLemonDRF.order",
+      "pk": 2,
+      "fields": {
+        "user": 8,
+        "delivery_crew": null,
+        "status": true,
+        "total": 20.00,
+        "date": "2023-10-02"
+      }
+    },
+    {
+      "model": "LittleLemonDRF.orderitem",
+      "pk": 2,
+      "fields": {
+        "order": 2,
+        "menuitem": 1,
+        "quantity": 2,
+        "unit_price": 10.00,
+        "price": 20.00
+      }
+    }
+  ]
+  

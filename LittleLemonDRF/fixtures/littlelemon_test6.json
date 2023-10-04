@@ -1,0 +1,62 @@
+[
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "Manager"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "Delivery Crew"
+    }
+  },
+  {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+          "username": "admin",
+          "password": "adminpassword",
+          "is_staff": true,
+          "is_superuser": true
+      }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "manager1",
+      "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+      "groups": [1]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "delivery1",
+      "password": "pbkdf2_sha256$600000$a42w0riBGaL7Dd2vttAJgY$dAkkEWk4JMVh5Id+tQZyCItV3kJyXT2Po4mCtYBqRH4=",
+      "groups": [2]
+    }
+  },
+  {
+    "model": "LittleLemonDRF.category",
+    "pk": 1,
+    "fields": {
+        "slug": "category1",
+        "title": "Category 1"
+    }
+  },
+  {
+    "model": "LittleLemonDRF.menuitem",
+    "pk": 1,
+    "fields": {
+        "title": "Sample Menu Item",
+        "price": "12.99",
+        "featured": false,
+        "category": 1
+    }
+  }
+]

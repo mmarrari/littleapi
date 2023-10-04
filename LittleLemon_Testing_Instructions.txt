@@ -1,0 +1,11 @@
+While the project contains numerous features and components, one of the best ways to understand its core functionalities is by executing the provided tests.
+
+Running the Tests:
+Execute the tests by running the following command:
+
+python manage.py test
+
+
+For ease of testing each of the endpoints, 
+I've provided an Insomnia collection file: Insomnia_LittleLemon.json 
+
